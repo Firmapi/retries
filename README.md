@@ -1,17 +1,27 @@
 # Retries
 
+[![Code Climate](https://codeclimate.com/github/Firmapi/retries/badges/gpa.svg)](https://codeclimate.com/github/Firmapi/retries)
+[![Test Coverage](https://codeclimate.com/github/Firmapi/retries/badges/coverage.svg)](https://codeclimate.com/github/Firmapi/retries)
+
 Retries is a gem that provides a single function, `with_retries`, to evaluate a block with randomized,
 truncated, exponential backoff.
 
-There are similar projects out there (see [retry_block](https://github.com/afazio/retry_block) and
-[retry_this](https://bitbucket.org/amanking/retry_this/wiki/Home), for example) but these will require you to
-implement the backoff scheme yourself. If you don't need randomized exponential backoff, you should check out
-those gems.
-
 ## Installation
 
-You can get the gem with `gem install retries` or simply add `gem "retries"` to your Gemfile if you're using
-bundler.
+Add this line to your application's Gemfile:
+
+```ruby
+gem "random_agent"
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install random_agent
+
 
 ## Usage
 
@@ -83,37 +93,12 @@ seconds:
 with_retries(max_tries: 10, base_sleep_seconds: 0.1, max_sleep_seconds: 2.0) { do_the_thing }
 ```
 
-### Testing
-
-In tests, you may wish to test that retries are being performed without any delay for sleeping:
-
-``` ruby
-Retries.sleep_enabled = false
-with_retries(max_tries: 100) { raise "Boo!" } # Now this fails fast
-```
-
-Of course, this will mask any errors to the `:base_sleep_seconds` and `:max_sleep_seconds` parameters, so use
-with caution.
-
-## Issues
-
-File tickets here on Github.
-
 ## Development
 
 To run the tests: first clone the repo, then
 
     $ bundle install
     $ bundle exec rake test
-
-## Authors
-
-Retries was created by Harry Robertson and Caleb Spare.
-
-Other contributions from:
-
-* Harry Lascelles ([hlascelles](https://github.com/hlascelles))
-* Michael Mazour ([mmazour](https://github.com/mmazour))
 
 ## License
 
