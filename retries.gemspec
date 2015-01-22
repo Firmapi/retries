@@ -1,12 +1,14 @@
-# -*- encoding: utf-8 -*-
 require File.expand_path('../lib/retries.rb', __FILE__)
 
+# Maintain your gem's version:
+require "retries/version"
+
 Gem::Specification.new do |gem|
-  gem.authors       = ["Caleb Spare"]
-  gem.email         = ["caleb@ooyala.com"]
+  gem.authors       = ["Antoine Finkelstein"]
+  gem.email         = ["antoine@firmapi.com"]
   gem.description   = %q{Retries is a gem for retrying blocks with randomized exponential backoff.}
   gem.summary       = %q{Retries is a gem for retrying blocks with randomized exponential backoff.}
-  gem.homepage      = "https://github.com/ooyala/retries"
+  gem.homepage      = "https://github.com/firmapi/retries"
 
   gem.files         = ["lib/retries.rb"]
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
