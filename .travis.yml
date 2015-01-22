@@ -6,6 +6,5 @@ sudo: false
 
 script: "bundle exec rake test"
 
-addons:
-  code_climate:
-    repo_token: 6ec770fc617834b4213f9c34925cd2691b80e01cb6a5d04e3108b953c63342f5
+after_success:
+  - coveralls
