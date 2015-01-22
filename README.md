@@ -1,6 +1,7 @@
 # Retries
 
 [![Code Climate](https://codeclimate.com/github/Firmapi/retries/badges/gpa.svg)](https://codeclimate.com/github/Firmapi/retries)
+[![Coverage Status](https://coveralls.io/repos/Firmapi/retries/badge.svg)](https://coveralls.io/r/Firmapi/retries)
 
 Retries is a gem that provides a single function, `with_retries`, to evaluate a block with randomized,
 truncated, exponential backoff.
@@ -10,17 +11,12 @@ truncated, exponential backoff.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "random_agent"
+gem "retries", git: "git@github.com:firmapi/retries.git"
 ```
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install random_agent
-
 
 ## Usage
 
