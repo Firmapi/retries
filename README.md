@@ -1,7 +1,6 @@
 # Retries
 
 [![Code Climate](https://codeclimate.com/github/Firmapi/retries/badges/gpa.svg)](https://codeclimate.com/github/Firmapi/retries)
-[![Test Coverage](https://codeclimate.com/github/Firmapi/retries/badges/coverage.svg)](https://codeclimate.com/github/Firmapi/retries)
 
 Retries is a gem that provides a single function, `with_retries`, to evaluate a block with randomized,
 truncated, exponential backoff.
