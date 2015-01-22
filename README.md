@@ -2,6 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/Firmapi/retries/badges/gpa.svg)](https://codeclimate.com/github/Firmapi/retries)
 [![Coverage Status](https://coveralls.io/repos/Firmapi/retries/badge.svg)](https://coveralls.io/r/Firmapi/retries)
+[![Build Status](https://travis-ci.org/Firmapi/retries.svg)](https://travis-ci.org/Firmapi/retries)
 
 Retries is a gem that provides a single function, `with_retries`, to evaluate a block several times in case of failure.
 
