@@ -1,8 +1,6 @@
 require "minitest/autorun"
 require "rr"
 require "timeout"
-require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
 
 $:.unshift File.join(File.dirname(__FILE__), "../lib")
 require "retries"
