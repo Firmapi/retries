@@ -1,6 +1,4 @@
-source 'https://rubygems.org'
-
-gem "codeclimate-test-reporter", group: :test, require: nil
+source "https://rubygems.org"
 
 # Specify your gem's dependencies in retries.gemspec
 gemspec
