@@ -66,6 +66,7 @@ of the time the block was first attempted, including all retries).
 handler = Proc.new do |exception, attempt_number, total_delay|
   puts "Handler saw a #{exception.class}; retry attempt #{attempt_number}; #{total_delay} seconds have passed."
 end
+
 with_retries(max_tries: 5, handler: handler, recover: [RuntimeError, ZeroDivisionError]) do |attempt|
   (1 / 0) if attempt == 3
   raise "hey!" if attempt < 5
@@ -85,8 +86,8 @@ Handler saw a RuntimeError; retry attempt 4; 1.886828 seconds have passed.
 
 By default, `with_retries` will wait about a half second between the first and second attempts, and then the
 delay time will increase exponentially between attempts (but stay at no more than 1 second). The delays are
-perturbed randomly. You can control the parameters via the two options `:base_sleep_seconds` and
-`:max_sleep_seconds`. For instance, you can start the delay at 100ms and go up to a maximum of about 2
+perturbed randomly. You can control the parameters via the two options `base_sleep_seconds` and
+`max_sleep_seconds`. For instance, you can start the delay at 100ms and go up to a maximum of about 2
 seconds:
 
 ``` ruby
